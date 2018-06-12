@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 // ng2-charts
 import { ChartsModule } from 'ng2-charts';
@@ -18,33 +20,26 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 
-
 @NgModule({
-    declarations: [
-        PagesComponent,
-        DashboardComponent,
-        ProgressComponent,
-        Graficas1Component,
-        IncrementadorComponent,
-        GraficoDonaComponent,
-        AccountSettingsComponent,
-        PromesasComponent,
-        RxjsComponent
-    ],
-    exports: [
-        PagesComponent,
-        DashboardComponent,
-        ProgressComponent,
-        Graficas1Component,
-        IncrementadorComponent,
-        GraficoDonaComponent
-    ],
-    imports: [
-        SharedModule,
-        PAGES_ROUTE,
-        FormsModule,
-        ChartsModule
-    ]
+  declarations: [
+    PagesComponent,
+    DashboardComponent,
+    ProgressComponent,
+    Graficas1Component,
+    IncrementadorComponent,
+    GraficoDonaComponent,
+    AccountSettingsComponent,
+    PromesasComponent,
+    RxjsComponent
+  ],
+  exports: [
+    PagesComponent,
+    DashboardComponent,
+    ProgressComponent,
+    Graficas1Component,
+    IncrementadorComponent,
+    GraficoDonaComponent
+  ],
+  imports: [CommonModule, SharedModule, PAGES_ROUTE, FormsModule, ChartsModule]
 })
-
-export class PagesModule { }
+export class PagesModule {}

@@ -12,7 +12,7 @@
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="javascript:void()">Perfil </a></li>
                         <li><a routerLinkActive="active" routerLink="/account-settings">Configuración</a></li>
-                        <li><a routerLink="/login">Cerrar Sesión</a></li>
+                        <li><a (click)="_usuarioService.logout()" href>Logout</a></li>
                     </ul>
                 </li>
                 <li class="nav-devider"></li>

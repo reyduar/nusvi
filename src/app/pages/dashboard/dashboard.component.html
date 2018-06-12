@@ -1,3 +1,64 @@
-<p>
-  dashboard works!
-</p>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card card-body">
+      <div class="row">
+        <div class="col-sm-12 col-xs-12">
+          <form class="input-form" name="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+            <h6 class="card-subtitle"> Required field </h6>
+            <div class="input-group">
+              <input name="search" [(ngModel)]="keywords" type="text" class="form-control" placeholder="Search for..." required>
+              <span class="input-group-btn">
+                <button class="btn btn-outline-info" type="button" (click)="onClick()">
+                  <i class="fa  fa-chevron-down"></i>
+                </button>
+              </span>
+              <span class="input-group-btn">
+                <button class="btn btn-info" type="submit">
+                  <i class="fa fa-search"></i> Search</button>
+              </span>
+            </div>
+            <br>
+            <div *ngIf="false">
+              <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+              <button class="btn btn-inverse waves-effect waves-light">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">SEARCH RESULT COUNT: {{ totalItems }}</h4>
+        <h6 class="card-subtitle"></h6>
+        <table id="demo-foo-row-toggler" class="table toggle-circle table-hover">
+          <thead>
+            <tr>
+              <th data-toggle="true"> VTKey </th>
+              <th> PublishedDT </th>
+              <th> SourceId </th>
+              <th data-hide="all"> Title </th>
+              <th data-hide="all"> Body </th>
+              <th data-hide="all"> MediaID </th>
+              <th data-hide="all"> Permalink </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of results">
+              <td>{{ data.searchFields.VTKey }}</td>
+              <td>{{ data.searchFields.PublishedDT | date:'mediumDate' : 'UTC' }}</td>
+              <td>{{ data.searchFields.SourceId }}</td>
+              <td>{{ data.searchFields.Title }}</td>
+              <td>{{ data.searchFields.Body }}</td>
+              <td>{{ data.searchFields.MediaID }}</td>
+              <td>{{ data.searchFields.Permalink }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
