@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+}
+
+.barra {
+  width: 100%;
+  height: 100px;
+  background-color: #cc1a00;
+}
+
+.avatar {
+  float: right;
+  margin-right: 20px;
+  list-style-type: none;
+}
+
+.userImagen {
+  margin: 2px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.userName {
+  font-weight: bold;
+  color: antiquewhite;
+  text-align: center;
+}
+
+.cabecera {
+  text-align: center;
+  background: black;
+  color: red;
+  font-size: 25px;
+}
+
+.imagenLogo {
+  height: 200px;
+  margin-left: 5px;
+  margin-top: 12px;
+}
+
+.cajaTexto {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 50px 2px;
+  cursor: pointer;
+}
+
+.botonBuscar {
+  border-radius: 4px;
+  border: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.lista {
+  list-style-type: none;
+  width: 100%;
+}
+
+h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.listaFila > img {
+  float: left;
+  margin: 0 15px 0 0;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.listaFila {
+  padding: 10px;
+  overflow: auto;
+}
+
+.listaFila:hover {
+  background: #eee;
+  cursor: pointer;
+}
